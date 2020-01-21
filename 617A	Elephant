@@ -1,20 +1,25 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 int main()
 {
-    int n,v,re,sum=0;
-    cin>>n;
-    for(int i=5; i>=1; i--)
+    int n;
+    cin >> n;
+    if(n>5)
     {
-        if(n>=i)
+        int res = n/5;
+        if((res*5) == n)
         {
-            v=n/i;
-            re=v*i;
-            n-=re;
-            sum+=v;
+            cout << res << endl;
+        }
+        else
+        {
+            cout << res+1 << endl;
         }
     }
-    cout<<sum<<endl;
- 
+    else{
+        cout << "1" << endl;
+    }
     return 0;
 }
+
